@@ -52,5 +52,20 @@ module.exports = {
     },
 
   },
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
+  ],
+  proxy: [
+    [
+      '/api',
+      {
+        // target: 'http://193.112.14.234', // api主机
+        target: 'http://127.0.0.1:5000/',
+        pathRewrite: { '^/api' : '/' }
+      }
+    ]
+  ]
 
-}
+
+};

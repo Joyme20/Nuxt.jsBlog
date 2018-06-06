@@ -12,6 +12,8 @@
 
 <script>
   import * as axios from "axios";
+  import Marked from "marked";
+
   import qs from 'qs';
 
   export default {
@@ -36,7 +38,7 @@
         //   // `withCredentials` 表示跨域请求时是否需要使用凭证
         //   withCredentials: true, // 默认的
         // });
-        axios.defaults.baseURL = 'http://127.0.0.1:5000/';
+        // axios.defaults.baseURL = 'http://193.112.14.234';
         axios.create();
         // `withCredentials` 表示跨域请求时是否需要使用凭证
         // axios.defaults.withCredentials = true; // 默认的
@@ -45,14 +47,17 @@
 
         // let keyNum = String(this.keyNum);
         console.log(_id);
-        axios.get('/articles/'+ _id)
+        axios.get('/api/articles/'+ _id)
           .then(response =>
             // console.log(response);
             // this.$set(this.htmlContent,response);
-            ( _this.htmlContent =
+            (
+              // text = response.data,
+                // _this.articles = text,
+              _this.htmlContent =
               _this.htmlContent
-              + response.data
-            // console.log(_this.htmlContent)
+              + Marked(response.data),
+            console.log(_this.htmlContent)
 
             // return this.htmlContent;
           ))

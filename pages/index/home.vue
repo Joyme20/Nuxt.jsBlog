@@ -40,7 +40,7 @@
           //   // `withCredentials` 表示跨域请求时是否需要使用凭证
           //   withCredentials: true, // 默认的
           // });
-          axios.defaults.baseURL = 'http://127.0.0.1:5000/';
+          // axios.defaults.baseURL = 'http://193.112.14.234';
           axios.create();
           // `withCredentials` 表示跨域请求时是否需要使用凭证
           // axios.defaults.withCredentials = true; // 默认的
@@ -49,7 +49,8 @@
 
           // let keyNum = String(this.keyNum);
           // console.log(_id);
-          axios.get('/title')
+          //   /api = http://193.112.14.234
+          axios.get('/api/title')
             .then(response => (
                 _this.id = response.id,
                 _this.articles = response.data,

@@ -26,7 +26,7 @@
       <el-menu :default-active="'1'" class="el-menu-demo" mode="horizontal" >
         <!--@select="handleSelect"-->
         <el-menu-item index="1">
-          <nuxt-link to="/home">HOME</nuxt-link>
+          <nuxt-link to="/">HOME</nuxt-link>
         </el-menu-item>
         <!--<el-submenu index="2">-->
         <!--<template slot="title">TOOLBOX</template>-->
@@ -49,9 +49,16 @@
         <el-menu-item index="4">ABOUT</el-menu-item>
       </el-menu>
     </div>
+    <!--<div class="nav">-->
+      <!--<li><nuxt-link to="/">HOME</nuxt-link></li>-->
+      <!--<li><nuxt-link to="/gallery">GALLERY</nuxt-link></li>-->
+      <!--<li><nuxt-link to="/gallery">GALLERY</nuxt-link></li>-->
+      <!--<li><nuxt-link to="/gallery">GALLERY</nuxt-link></li>-->
+    <!--</div>-->
 
     <div>
-      <nuxt-child/>
+      <!--<home></home>-->
+      <nuxt-child></nuxt-child>
 
     </div>
 
@@ -61,10 +68,12 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import Home from './index/home.vue'
 
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    Home
   }
 }
 </script>
@@ -94,4 +103,12 @@ export default {
     text-decoration: none;
 
   }
+  /*.nav{*/
+    /*margin: 0 auto;*/
+    /*!*max-width: 660px;*!*/
+  /*}*/
+  /*.nav li{*/
+    /*display: inline;*/
+    /*margin: 0 20px;*/
+  /*}*/
 </style>
