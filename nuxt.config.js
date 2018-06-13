@@ -26,9 +26,9 @@ module.exports = {
     {
       src:'~plugins/element-ui',
       ssr: false
-    //  ssr本是false
+      //  ssr本是false
     }
-    ],
+  ],
 
 
   /*
@@ -60,9 +60,10 @@ module.exports = {
     [
       '/api',
       {
-        // target: 'http://193.112.14.234', // api主机
-        target: 'http://127.0.0.1:5000/',
-        pathRewrite: { '^/api' : '/' }
+        target: 'http://193.112.14.234:5000', // api主机
+        // target: 'http://127.0.0.1:5000/',
+        pathRewrite: { '^/api' : '/' },
+        changeOrigin:true //跨域
       }
     ]
   ]

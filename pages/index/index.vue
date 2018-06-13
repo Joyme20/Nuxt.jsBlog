@@ -1,20 +1,3 @@
-<!--<template>-->
-  <!--<div>-->
-    <!--<p>aaaa</p>-->
-  <!--</div>-->
-
-<!--</template>-->
-
-<!--<script>-->
-    <!--export default {-->
-        <!--name: "index"-->
-    <!--}-->
-<!--</script>-->
-
-<!--<style scoped>-->
-
-<!--</style>-->
-
 <template>
   <div class="index">
     <div class="line"><span><b>CODING</b></span></div>
@@ -37,7 +20,6 @@
   import * as axios from "axios";
   import qs from 'qs';
   // import article_1 from "article/article_1";
-
   export default {
     name: "index",
     data(){
@@ -59,11 +41,11 @@
         // });
         // axios.defaults.baseURL = 'http://193.112.14.234';
         axios.create();
+
         // `withCredentials` 表示跨域请求时是否需要使用凭证
         // axios.defaults.withCredentials = true; // 默认的
         let _this = this;
         // let _id = this.$route.params.id;  //获取传过来的参数
-
         // let keyNum = String(this.keyNum);
         // console.log(_id);
         //   /api = http://193.112.14.234
@@ -82,8 +64,6 @@
     mounted(){
       this.request();
     },
-
-
   }
 </script>
 
@@ -108,7 +88,6 @@
   .line span {
     display: block;      /*设置为块级元素会独占一行形成上下居中的效果*/
     position: relative;  /*定位横线（当横线的父元素）*/
-
     color: #175ca4;      /*居中文字的颜色*/
     text-align: center;
   }
@@ -123,10 +102,7 @@
   .line span:before {
     left: 0%;              /*调整背景横线的左右距离*/
   }
-
   .line span:after {
     right: 0%;
   }
-
 </style>
-

@@ -38,8 +38,9 @@
         //   // `withCredentials` 表示跨域请求时是否需要使用凭证
         //   withCredentials: true, // 默认的
         // });
-        // axios.defaults.baseURL = 'http://193.112.14.234';
         axios.create();
+        // axios.defaults.baseURL = 'http://193.112.14.234';
+
         // `withCredentials` 表示跨域请求时是否需要使用凭证
         // axios.defaults.withCredentials = true; // 默认的
         let _this = this;
